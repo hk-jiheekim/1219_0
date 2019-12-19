@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>우리의 소리를 찾아서</title>
+	<style type="text/css">
+
+
+		@font-face { font-family: 'SDKukdetopokki'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDKukdetopokki.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+		@font-face { font-family: 'GyeonggiBatang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/GyeonggiBatang.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+		section, .wrap{position: relative; z-index: 999;}
+		header{position: absolute; top: 150px; left:calc(50% - 220px); font-size: 46px; font-family: 'SDKukdetopokki'; z-index: 999; color: #071748;}
+		p{position: absolute; top: 250px; left: calc(50% - 260px); width: 500px; line-height: 1.8em; text-align: center; font-family: 'GyeonggiBatang';  font-size: 19px; word-break: keep-all;  font-weight: 300; z-index: 999;}
+		
+		
+		ul{list-style-type: none;}
+		li{float: left;}
+		li a{text-decoration: none; color: black; font-weight: 300; display: block; text-align:center; padding: 5px 35px; opacity: 70%; color: #071748;}
+		li a:link, li a:hover; li a:active;, li a:visited{display:block; text-decoration: none; color: black; font-weight: bold; transition: all 1s;}
+		li a:hover{background: #022B47; color: white;text-decoration: none;}
+		.na{position: absolute; top: 450px; left: calc(50% - 360px); font-size: 20px; font-family: 'SDKukdetopokki'; z-index: 999;}
+
+
+		.rain{width: 10px; height:30px; background: rgb(255,0,255); position: absolute;
+			animation: rr 50s infinite ease-in; z-index: 990; opacity: 0.7;}
+		.rain:hover{height: 400px;}
+		@keyframes rr{from{top: -50px;} to{top: 600px;}}
+
+	</style>
+</head>
+<body>
+	<div class="rain" id="tt"></div>
+	<section>
+		<header>우리의 소리를 찾아서</header>
+		<div class="box1" style="position: absolute; width: 900px; height: 520px; background-color: #ACC8EF; opacity: 0.3; z-index: 996; top:70px; left: calc(50% - 450px); border-radius: 250px; "></div>
+		</section>
+		
+		<section class="a">
+			<div class="wrap">
+				<p>'우리의 소리를 찾아서'는 전통의 국악의 소리와 이야기를 설명해주고 더불어 퓨전 국악을 소개하여 보다 국악을 쉽고 즐겁게 즐길 수 있게 해주는 페이지 입니다.</p>
+			</div>
+		</section>
+		
+		<div class="na">
+			<nav class="">
+		<ul>
+			
+			<li><a href="https://hk-jiheekim.github.io/1219_1/">수궁가</a></li>
+			<li><a href="https://hk-jiheekim.github.io/1219_2/">사랑가</a></li>
+			<li><a href="https://hk-jiheekim.github.io/1219_3/">난봉가</a></li>
+			<li><a href="https://hk-jiheekim.github.io/1219_4/">태평가</a></li>
+			<li><a href="https://hk-jiheekim.github.io/1219_5/ ">수심가</a></li>
+
+
+		</ul>
+		</nav>
+		</div>
+		<section>
+			
+		</section>
+		
+
+		<script type="text/javascript">
+		for(var i=0; i<50; i++){
+
+			var b =tt.cloneNode(true);
+			b.id = i;
+			b.clssName = "rain";
+			b.style.left = Math.random()*window.innerWidth + "px";
+			b.style.height = Math.random()*50 +"px";
+			b.style.animationDuration = Math.random()*10 + "5s";
+			b.style.background = makecolor();
+		
+			document.body.appendChild(b);
+			}
+
+		function makecolor(){
+			var rr = Math.random()*255;
+			var gg = Math.random()*255;
+			var bb = Math.random()*255;
+			var tt = "rgb("+ rr + "," + gg + "," + bb + ")";
+			return tt; 
+			}
+		</script>
+</body>
+</html>
